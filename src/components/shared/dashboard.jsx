@@ -11,7 +11,7 @@ import UserUpdate from "./entities/userupdate";
 import Cards from "./entities/cards";
 import Organization from "./entities/organization";
 import RolePermissionMapping from "./entities/rolePermissionMapping";
-import OrganizationListView from "./listviews/organizationlistview";
+import OrganizationListView from "./listviews/OrganizationListView";
 import UserTeam from "./entities/userTeam";
 import ProjectTeam from "./entities/projectTeam";
 import ProjectListView from "./listviews/projectListView";
