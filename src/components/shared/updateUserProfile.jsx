@@ -47,7 +47,7 @@ function UpdateUserProfile() {
       headers: { Authorization: `Bearer ${accesstoken}` },
     };
     axios
-      .put("http://localhost:3005/Users/userprofile", updatedProfile, config)
+      .put("https://backend-ucx2.onrender.com/Users/userprofile", updatedProfile, config)
       .then((response) => {
         console.log(response.data);
       })

@@ -17,7 +17,7 @@ function Profile(props) {
       headers: { Authorization: `Bearer ${accesstoken}` },
     };
     axios
-      .get("http://localhost:3005/Users/userprofile", config)
+      .get("https://backend-ucx2.onrender.com/Users/userprofile", config)
       .then((response) => {
         setUser(response.data);
         localStorage.setItem("userProfile", JSON.stringify(response.data));

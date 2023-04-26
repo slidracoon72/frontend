@@ -3,7 +3,7 @@ import "../../../assets/vendor/datatables/dataTables.bootstrap4.min.css";
 export default function ProjectListView({ addView }) {
   const [projects, setProjects] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3005/project", {
+    fetch("https://backend-ucx2.onrender.com/project", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -19,7 +19,7 @@ export default function ProjectListView({ addView }) {
 
   const handleDelete = async (event) => {
     console.log("Pressed Delete");
-    await fetch("http://localhost:3005/project", {
+    await fetch("https://backend-ucx2.onrender.com/project", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -36,7 +36,7 @@ export default function ProjectListView({ addView }) {
       .catch((error) => {
         console.error("Error deleting data:", error);
       });
-    await fetch("http://localhost:3005/project", {
+    await fetch("https://backend-ucx2.onrender.com/project", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

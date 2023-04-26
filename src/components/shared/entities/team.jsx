@@ -18,7 +18,7 @@ export default function Team({ View, add, updateData }) {
       name: teamName.current.value,
       description: teamDescription.current.value,
     };
-    await fetch("http://localhost:3005/team", {
+    await fetch("https://backend-ucx2.onrender.com/team", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -39,7 +39,7 @@ export default function Team({ View, add, updateData }) {
       name: teamName.current.value,
       description: teamDescription.current.value,
     };
-    await fetch("http://localhost:3005/team", {
+    await fetch("https://backend-ucx2.onrender.com/team", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

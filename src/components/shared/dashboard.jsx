@@ -32,7 +32,7 @@ export default function Dashboard() {
       if (localStorage.getItem("accesstoken") !== null) {
         await axios
           .post(
-            "http://localhost:3005/auth/login",
+            "https://backend-ucx2.onrender.com/auth/login",
             {},
             {
               headers: {

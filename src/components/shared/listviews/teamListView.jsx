@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 export default function TeamListView({ addView }) {
   const [teams, setTeams] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3005/team", {
+    fetch("https://backend-ucx2.onrender.com/team", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -18,7 +18,7 @@ export default function TeamListView({ addView }) {
   }, []);
 
   const handleDelete = async (event) => {
-    await fetch("http://localhost:3005/team", {
+    await fetch("https://backend-ucx2.onrender.com/team", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -35,7 +35,7 @@ export default function TeamListView({ addView }) {
       .catch((error) => {
         console.error("Error deleting data:", error);
       });
-    fetch("http://localhost:3005/team", {
+    fetch("https://backend-ucx2.onrender.com/team", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

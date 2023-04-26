@@ -19,7 +19,7 @@ export default function RolePermissionMapping({ userData, View }) {
 
 
   useEffect(() => {
-    fetch("http://localhost:3005/users/user?id=" + userData, {
+    fetch("https://backend-ucx2.onrender.com/users/user?id=" + userData, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -112,7 +112,7 @@ export default function RolePermissionMapping({ userData, View }) {
       projectTeamMappingAccess: (isChecked6.create ? "1" : "0") + (isChecked6.read ? "1" : "0") + (isChecked6.update ? "1" : "0") + (isChecked6.delete ? "1" : "0")
     }
     console.log(obj);
-    await fetch("http://localhost:3005/setuser", {
+    await fetch("https://backend-ucx2.onrender.com/setuser", {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

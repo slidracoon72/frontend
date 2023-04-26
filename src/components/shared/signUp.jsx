@@ -60,7 +60,7 @@ function UserSignUp(props) {
     );
     console.log(hashedPassword);
     await axios
-      .post("http://localhost:3005/auth/register", {
+      .post("https://backend-ucx2.onrender.com/auth/register", {
         email: email.current.value.toString(),
         password: hashedPassword,
       })

@@ -59,7 +59,7 @@ export default function Cards({ View, add, updateData }) {
       attachment: attachment.current.value,
       sprint: sprintId.current.value,
     };
-    await fetch("http://localhost:3005/card", {
+    await fetch("https://backend-ucx2.onrender.com/card", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -92,7 +92,7 @@ export default function Cards({ View, add, updateData }) {
       attachment: attachment.current.value,
       sprint: sprintId.current.value,
     };
-    await fetch("http://localhost:3005/card", {
+    await fetch("https://backend-ucx2.onrender.com/card", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

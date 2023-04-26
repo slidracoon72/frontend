@@ -30,7 +30,7 @@ export default function Project({ View, add, updateData }) {
       startDate: startDate.current.value,
       endDate: endDate.current.value,
     };
-    await fetch("http://localhost:3005/project", {
+    await fetch("https://backend-ucx2.onrender.com/project", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -52,7 +52,7 @@ export default function Project({ View, add, updateData }) {
       startDate: startDate.current.value,
       endDate: endDate.current.value,
     };
-    await fetch("http://localhost:3005/project", {
+    await fetch("https://backend-ucx2.onrender.com/project", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

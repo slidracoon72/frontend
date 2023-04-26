@@ -24,7 +24,7 @@ export default function Sprint({ View, add, updateData }) {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:3005/", {
+    fetch("https://backend-ucx2.onrender.com/", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -49,7 +49,7 @@ export default function Sprint({ View, add, updateData }) {
       endDate: endDate.current.value,
       project: project.current.value,
     };
-    await fetch("http://localhost:3005/sprint", {
+    await fetch("https://backend-ucx2.onrender.com/sprint", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -74,7 +74,7 @@ export default function Sprint({ View, add, updateData }) {
       endDate: endDate.current.value,
       project: project.current.value,
     };
-    await fetch("http://localhost:3005/sprint", {
+    await fetch("https://backend-ucx2.onrender.com/sprint", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

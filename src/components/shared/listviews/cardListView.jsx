@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 export default function CardListView({ addView }) {
   const [cards, setCards] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3005/card", {
+    fetch("https://backend-ucx2.onrender.com/card", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -18,7 +18,7 @@ export default function CardListView({ addView }) {
   }, []);
 
   const handleDelete = async (event) => {
-    await fetch("http://localhost:3005/card", {
+    await fetch("https://backend-ucx2.onrender.com/card", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -35,7 +35,7 @@ export default function CardListView({ addView }) {
       .catch((error) => {
         console.error("Error deleting data:", error);
       });
-    fetch("http://localhost:3005/card", {
+    fetch("https://backend-ucx2.onrender.com/card", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

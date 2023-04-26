@@ -8,7 +8,7 @@ export default function OrganizationListView() {
     const joinOrganization = async (id) => {
         let obj = { orgId: id };
         setDisabledButtons((prevDisabledButtons) => [...prevDisabledButtons, id]);
-        fetch("http://localhost:3005/join", {
+        fetch("https://backend-ucx2.onrender.com/join", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -20,7 +20,7 @@ export default function OrganizationListView() {
             .then(data => setDisabledButtons(disabledButtons.filter((disabledId) => disabledId !== id)));
     };
     useEffect(() => {
-        fetch("http://localhost:3005/", {
+        fetch("https://backend-ucx2.onrender.com/", {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

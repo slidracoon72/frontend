@@ -11,7 +11,7 @@ export default function Navbar({ isNotify, viewChange }) {
       const token = localStorage
         .getItem("accesstoken")
         .replace(/^"(.*)"$/, "$1");
-      const response = await fetch("http://localhost:3005/auth/logout", {
+      const response = await fetch("https://backend-ucx2.onrender.com/auth/logout", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -35,7 +35,7 @@ export default function Navbar({ isNotify, viewChange }) {
   };
 
   useEffect(() => {
-    fetch("http://localhost:3005/notifications", {
+    fetch("https://backend-ucx2.onrender.com/notifications", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

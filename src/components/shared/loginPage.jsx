@@ -15,7 +15,7 @@ function UserLogin(props) {
     if (localStorage.getItem("accesstoken") !== null) {
       axios
         .post(
-          "http://localhost:3005/auth/login",
+          "https://backend-ucx2.onrender.com/auth/login",
           {},
           {
             headers: {
@@ -40,7 +40,7 @@ function UserLogin(props) {
       "$2a$10$1hUhzKenVi7zJnoJECxbfOitjjjAfrWpqqXFNFSfEMQK"
     );
     axios
-      .post("http://localhost:3005/auth/login", {
+      .post("https://backend-ucx2.onrender.com/auth/login", {
         email: user.current.value,
         password: hashedPassword,
       })
@@ -50,7 +50,7 @@ function UserLogin(props) {
           localStorage.setItem("accesstoken", dataString);
           setData(response.data);
           let permissions = await axios.get(
-            "http://localhost:3005/users/permissions",
+            "https://backend-ucx2.onrender.com/users/permissions",
             {
               headers: {
                 Authorization: `Bearer ${response.data.accessToken}`,
@@ -61,7 +61,7 @@ function UserLogin(props) {
             "permissions",
             JSON.stringify(permissions.data[0])
           );
-          let role = await axios.get("http://localhost:3005/users/role", {
+          let role = await axios.get("https://backend-ucx2.onrender.com/users/role", {
             headers: {
               Authorization: `Bearer ${response.data.accessToken}`,
             },

@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 export default function SprintListView({ addView }) {
   const [sprints, setSprints] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3005/sprint", {
+    fetch("https://backend-ucx2.onrender.com/sprint", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -18,7 +18,7 @@ export default function SprintListView({ addView }) {
   }, []);
 
   const handleDelete = async (event) => {
-    await fetch("http://localhost:3005/sprint", {
+    await fetch("https://backend-ucx2.onrender.com/sprint", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -35,7 +35,7 @@ export default function SprintListView({ addView }) {
       .catch((error) => {
         console.error("Error deleting data:", error);
       });
-    fetch("http://localhost:3005/sprint", {
+    fetch("https://backend-ucx2.onrender.com/sprint", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
