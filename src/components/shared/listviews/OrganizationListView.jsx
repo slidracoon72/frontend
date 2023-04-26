@@ -4,6 +4,7 @@ export default function OrganizationListView() {
 
     const [organizations, setOrganizations] = useState([]);
     const [disabledButtons, setDisabledButtons] = useState([]);
+    const [use, setUse] = useState([]);
 
     const joinOrganization = async (id) => {
         let obj = { orgId: id };
